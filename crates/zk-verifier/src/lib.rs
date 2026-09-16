@@ -123,7 +123,7 @@ fn create_artifact_directory() -> io::Result<ArtifactDirectory> {
     for _ in 0..16 {
         let id = NEXT_ID.fetch_add(1, Ordering::Relaxed);
         let path = env::temp_dir().join(format!(
-            "safetrust-zk-{}-{timestamp}-{id}",
+            "anchorlock-zk-{}-{timestamp}-{id}",
             std::process::id()
         ));
         match fs::create_dir(&path) {

@@ -26,7 +26,7 @@ function installedVersion(binary) {
 
 function download(url, destination, expectedSha256, redirects = 5) {
   return new Promise((resolve, reject) => {
-    const request = https.get(url, { headers: { 'User-Agent': 'SafeTrust-zk-verifier' } }, (response) => {
+    const request = https.get(url, { headers: { 'User-Agent': 'Anchorlock-zk-verifier' } }, (response) => {
       if (response.statusCode >= 300 && response.statusCode < 400 && response.headers.location) {
         response.resume()
         if (redirects === 0) return reject(new Error('too many download redirects'))
@@ -67,7 +67,7 @@ async function main() {
     return
   }
 
-  const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'safetrust-bb-'))
+  const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'anchorlock-bb-'))
   try {
     const [assetName, sha256] = asset
     const archive = path.join(temporary, assetName)
