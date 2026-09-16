@@ -26,7 +26,7 @@ pub fn parse_x_payment_header(header: &str) -> Result<X402PaymentHeader, String>
     // Validate network is Stellar
     if !payment.network.starts_with("stellar") {
         return Err(format!(
-            "Unsupported network: '{}' — SafeTrust only accepts Stellar payments",
+            "Unsupported network: '{}' — Anchorlock only accepts Stellar payments",
             payment.network
         ));
     }
@@ -74,6 +74,6 @@ pub fn build_payment_requirement(
         },
         facilitator_url: facilitator_url.to_string(),
         pay_to: pay_to.to_string(),
-        description: "SafeTrust booking fee".to_string(),
+        description: "Anchorlock booking fee".to_string(),
     }
 }

@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-/// The X-Accepts-Payment header SafeTrust returns on 402 responses
+/// The X-Accepts-Payment header Anchorlock returns on 402 responses
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct PaymentRequirement {
     pub scheme: &'static str, // "exact"
@@ -8,7 +8,7 @@ pub struct PaymentRequirement {
     pub max_amount_usdc: f64, // e.g. 0.10
     pub asset: AssetInfo,
     pub facilitator_url: String,
-    pub pay_to: String, // SafeTrust platform wallet address
+    pub pay_to: String, // Anchorlock platform wallet address
     pub description: String,
 }
 

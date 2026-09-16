@@ -1,4 +1,4 @@
-//! pg-bulk-upsert — one-statement escrow UPSERT for SafeTrust reconciliation.
+//! pg-bulk-upsert — one-statement escrow UPSERT for Anchorlock reconciliation.
 //!
 //! Replaces the row-by-row `db.query(UPSERT_ESCROW_SQL, ...)` loop in
 //! `webhook/src/lib/reconciliation.js`. That loop sends one INSERT ... ON

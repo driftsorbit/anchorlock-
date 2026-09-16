@@ -1,4 +1,4 @@
-//! stellar-utils — Rust-native Stellar utilities for SafeTrust.
+//! stellar-utils — Rust-native Stellar utilities for Anchorlock.
 //!
 //! Exposes two functions to Node.js via Neon (Node-API):
 //!   - `validateStellarAddress(address) -> boolean`
@@ -177,7 +177,7 @@ mod tests {
         let address = address_of(&key);
         assert!(is_valid_stellar_address(&address));
 
-        let message = b"Hello, SafeTrust!";
+        let message = b"Hello, Anchorlock!";
         let signature_hex = hex::encode(key.sign(message).to_bytes());
 
         assert!(verify_ed25519(message, &signature_hex, &address));

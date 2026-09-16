@@ -1,4 +1,4 @@
-//! chunk-processor — concurrent escrow-chunk fetcher for SafeTrust reconciliation.
+//! chunk-processor — concurrent escrow-chunk fetcher for Anchorlock reconciliation.
 //!
 //! Replaces the sequential `for` loop in `webhook/src/lib/reconciliation.js` that
 //! calls the TrustlessWork indexer one chunk at a time. Each chunk is an
