@@ -1,6 +1,6 @@
 # Multi-Tenant Architecture
 
-SafeTrust exposes a single Hasura GraphQL endpoint backed by one PostgreSQL
+Anchorlock exposes a single Hasura GraphQL endpoint backed by one PostgreSQL
 instance. The database is split into two named schemas, each mapped to its own
 Hasura **source**. This document explains why the split exists, how it works,
 and the conventions contributors must follow.
@@ -21,7 +21,7 @@ and the conventions contributors must follow.
 
 ## Why two schemas?
 
-SafeTrust has two product lines sharing one database:
+Anchorlock has two product lines sharing one database:
 
 | Tenant | Schema | Domain |
 |---|---|---|
@@ -82,7 +82,7 @@ The `safetrust` escrow model has three tiers:
    `due_date`, and approval/release timestamps. Milestones reference
    `trustless_work_escrows` via `escrow_id`.
 
-3. **`escrow_transactions`** — SafeTrust's business-level log. Records the HTTP
+3. **`escrow_transactions`** — Anchorlock's business-level log. Records the HTTP
    interactions with the TrustlessWork API (request type, status code, payload),
    links back to a `bid_request`, and tracks cancellation and refund state.
 
@@ -91,7 +91,7 @@ flowchart TD
     subgraph safetrust schema
         TWE[trustless_work_escrows\nBlockchain mirror\nSoroban contract state\nstatus balance marker approver]
         EM[escrow_milestones\nRelease schedule\ncheck_in check_out flags]
-        ET[escrow_transactions\nSafeTrust business log\nbooking metadata]
+        ET[escrow_transactions\nAnchorlock business log\nbooking metadata]
     end
 
     subgraph hotel_industry schema
