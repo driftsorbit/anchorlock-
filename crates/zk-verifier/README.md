@@ -1,6 +1,6 @@
 # zk-verifier
 
-Rust/Neon verifier for SafeTrust proof-of-funds proofs.
+Rust/Neon verifier for Anchorlock proof-of-funds proofs.
 
 `verifyProofOfFunds(proofHex, verificationKeyHex, thresholdStroops,
 balanceCommitmentHex)` accepts the hex encoding of the binary `proof` and `vk`

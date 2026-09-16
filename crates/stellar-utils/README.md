@@ -1,6 +1,6 @@
 # stellar-utils 🪐
 
-Rust-native Stellar utilities for SafeTrust, exposed to Node.js via **Neon** (Node-API).
+Rust-native Stellar utilities for Anchorlock, exposed to Node.js via **Neon** (Node-API).
 
 ## What it provides
 

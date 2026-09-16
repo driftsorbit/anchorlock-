@@ -1,6 +1,6 @@
 # pg-bulk-upsert
 
-Rust-native bulk UPSERT for the SafeTrust reconciliation service, exposed to
+Rust-native bulk UPSERT for the Anchorlock reconciliation service, exposed to
 Node.js via **Neon** (Node-API v6).
 
 Today, after a chunk of escrow state comes back from the TrustlessWork indexer,

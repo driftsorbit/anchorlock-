@@ -2,7 +2,7 @@
 name = "zk-verifier"
 version = "0.1.0"
 edition = "2021"
-description = "Neon addon for verifying SafeTrust Noir UltraHonk proofs"
+description = "Neon addon for verifying Anchorlock Noir UltraHonk proofs"
 
 [lib]
 crate-type = ["cdylib", "rlib"]

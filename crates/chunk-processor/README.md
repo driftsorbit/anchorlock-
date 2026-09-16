@@ -1,6 +1,6 @@
 # chunk-processor ⚡
 
-Rust-native, concurrent escrow-chunk fetcher for the SafeTrust reconciliation
+Rust-native, concurrent escrow-chunk fetcher for the Anchorlock reconciliation
 service, exposed to Node.js via **Neon** (Node-API v6).
 
 It replaces the sequential `for` loop in

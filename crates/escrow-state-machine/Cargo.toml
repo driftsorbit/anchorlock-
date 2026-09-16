@@ -2,7 +2,7 @@
 name    = "escrow-state-machine"
 version = "0.1.0"
 edition = "2021"
-description = "Compile-time SafeTrust escrow state machine (Neon native addon)"
+description = "Compile-time Anchorlock escrow state machine (Neon native addon)"
 
 [lib]
 # cdylib → Node-API addon (index.node); rlib → lets `cargo test` build
