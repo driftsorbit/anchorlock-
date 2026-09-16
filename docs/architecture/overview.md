@@ -1,6 +1,6 @@
-# SafeTrust Architecture Overview
+# Anchorlock Architecture Overview
 
-SafeTrust connects four layers: a Next.js frontend, an Express
+Anchorlock connects four layers: a Next.js frontend, an Express
 webhook backend, a Hasura GraphQL engine, and the Stellar
 blockchain via TrustlessWork. Rust crates handle security-critical
 and performance-critical work via Neon bindings.
@@ -15,12 +15,12 @@ flowchart TD
         AI([AI Agent / x402])
     end
 
-    subgraph SafeTrust Frontend
+    subgraph Anchorlock Frontend
         FE[Next.js 14 dApp]
         FW[Freighter Wallet]
     end
 
-    subgraph SafeTrust Backend
+    subgraph Anchorlock Backend
         WH[Express Webhook\nNode.js TypeScript]
         RC[Rust Crates\nNeon Bindings]
         HG[Hasura GraphQL\nv2.47.0]
@@ -64,10 +64,10 @@ Every escrow operation on Stellar requires two steps:
    signs the XDR locally, then the frontend submits it directly to
    TrustlessWork via `/helper/send-transaction`
 
-SafeTrust's backend does not create, sign, or submit XDR, and it does not
+Anchorlock's backend does not create, sign, or submit XDR, and it does not
 expose `/api/escrows/send-transaction`. It receives the resulting escrow state
 through separate HMAC-signed TrustlessWork webhook callbacks. This means
-SafeTrust never holds private keys; the platform is non-custodial by design.
+Anchorlock never holds private keys; the platform is non-custodial by design.
 
 ```mermaid
 sequenceDiagram
