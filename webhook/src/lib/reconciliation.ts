@@ -256,7 +256,7 @@ export function __resetBulkUpsertForTests(): void {
  * Columns synced from the indexer:
  *   status, amount, balance, marker, approver, releaser, updated_at
  *
- * Columns NOT touched (owned by SafeTrust):
+ * Columns NOT touched (owned by Anchorlock):
  *   id, booking_id, room_id, hotel_id, guest_id, booking_*, escrow_metadata,
  *   booking_metadata, created_at, tenant_id, escrow_type, asset_code,
  *   asset_issuer, resolver
