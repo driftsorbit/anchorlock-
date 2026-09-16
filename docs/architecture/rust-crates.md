@@ -1,6 +1,6 @@
-# Rust crates in SafeTrust
+# Rust crates in Anchorlock
 
-SafeTrust uses a small set of Rust crates behind Neon bindings so that Node.js can call into high-assurance native code for the parts of the platform that need cryptographic correctness, parallel CPU work, and blockchain-precise parsing.
+Anchorlock uses a small set of Rust crates behind Neon bindings so that Node.js can call into high-assurance native code for the parts of the platform that need cryptographic correctness, parallel CPU work, and blockchain-precise parsing.
 
 ## Why Rust is used
 

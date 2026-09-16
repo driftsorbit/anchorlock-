@@ -1,6 +1,6 @@
-# 📚 SafeTrust Backend Documentation
+# 📚 Anchorlock Backend Documentation
 
-Reference documentation for the **SafeTrust** backend — Hasura GraphQL, PostgreSQL, the multi-tenant engine, smart contract escrow lifecycle, and operational tooling.
+Reference documentation for the **Anchorlock** backend — Hasura GraphQL, PostgreSQL, the multi-tenant engine, smart contract escrow lifecycle, and operational tooling.
 
 For setup and day-to-day commands, start with the [root README](../README.md).
 
@@ -12,7 +12,7 @@ For setup and day-to-day commands, start with the [root README](../README.md).
 | Document | Description |
 |---|---|
 | [Multi-Tenant Architecture](architecture/multi-tenant.md) | Two-tenant isolation model (`safetrust` and `hotel_industry`), schema routing, and RBAC rules |
-| [Rust Crates in SafeTrust](architecture/rust-crates.md) | High-assurance native extensions via Neon bindings for cryptography and blockchain operations |
+| [Rust Crates in Anchorlock](architecture/rust-crates.md) | High-assurance native extensions via Neon bindings for cryptography and blockchain operations |
 
 ### 🔐 Stellar & Escrow Flows
 | Document | Description |
