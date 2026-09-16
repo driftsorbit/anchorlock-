@@ -20,7 +20,7 @@ flowchart TD
     L --> M
 ```
 
-## Gustafson's Law applied to SafeTrust
+## Gustafson's Law applied to Anchorlock
 
 `S(N) = s + p×N`
 where:
