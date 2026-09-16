@@ -1,5 +1,5 @@
 ---
-name: Safetrust Backend issue
+name: Anchorlock Backend issue
 about: Suggest an idea for this project
 title: ''
 labels: ''
