@@ -2,7 +2,7 @@ import { Response } from 'express'
 import { AuthenticatedRequest } from '../../../middleware/auth.middleware'
 import { createReservationHandler } from '../create.handler'
 import { hasuraRequest } from '../../../services/hasura'
-import type { CreateReservationPayload } from '@safetrust/types'
+import type { CreateReservationPayload } from '@anchorlock/types'
 
 jest.mock('../../../services/hasura', () => ({
   hasuraRequest: jest.fn(),

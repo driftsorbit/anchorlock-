@@ -5,7 +5,7 @@ import type {
   ChainType,
   SyncWalletPayload,
   SyncWalletResponse,
-} from '@safetrust/types'
+} from '@anchorlock/types'
 
 const VALID_CHAIN_TYPES: readonly ChainType[] = ['ETH', 'STELLAR', 'BSC']
 

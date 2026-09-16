@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { InitializeEscrowPayload } from '@safetrust/types';
+import { InitializeEscrowPayload } from '@anchorlock/types';
 import {
   hasuraRequest,
   logAndCheckWebhookEvent,

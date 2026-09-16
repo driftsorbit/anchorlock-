@@ -4,7 +4,7 @@ import { Response } from 'express'
 import { syncWalletHandler } from '../sync-wallet.handler'
 import { query } from '../../../services/db'
 import { AuthenticatedRequest } from '../../../middleware/auth.middleware'
-import type { SyncWalletPayload } from '@safetrust/types'
+import type { SyncWalletPayload } from '@anchorlock/types'
 
 jest.mock('../../../services/db', () => ({
   query: jest.fn(),

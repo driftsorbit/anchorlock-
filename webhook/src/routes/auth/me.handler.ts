@@ -1,7 +1,7 @@
 import { Response } from 'express'
 import { query } from '../../services/db'
 import { AuthenticatedRequest } from '../../middleware/auth.middleware'
-import type { MeResponse, UserRole } from '@safetrust/types'
+import type { MeResponse, UserRole } from '@anchorlock/types'
 
 interface RoleRow {
   name: UserRole

@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 import { hasuraRequest } from '../../services/hasura'
-import type { CreateReservationPayload, Reservation } from '@safetrust/types'
+import type { CreateReservationPayload, Reservation } from '@anchorlock/types'
 
 type CreateReservationResponse =
   | { reservation: Reservation }

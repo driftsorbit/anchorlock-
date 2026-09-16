@@ -8,7 +8,7 @@ import {
   markWebhookEventProcessed,
   getHasuraEndpoint,
 } from '../../../services/hasura'
-import type { ApproveMilestonePayload } from '@safetrust/types'
+import type { ApproveMilestonePayload } from '@anchorlock/types'
 
 jest.mock('../../../services/hasura', () => ({
   getHasuraEndpoint: jest.requireActual('../../../services/hasura').getHasuraEndpoint,

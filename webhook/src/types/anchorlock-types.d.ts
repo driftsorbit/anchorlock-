@@ -1,4 +1,4 @@
-declare module '@safetrust/types' {
+declare module '@anchorlock/types' {
   export type UserRole = 'admin' | 'host' | 'guest' | string
 
   export interface MeUser {
