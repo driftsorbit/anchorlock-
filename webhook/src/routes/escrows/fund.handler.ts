@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { FundEscrowPayload } from '@safetrust/types';
+import { FundEscrowPayload } from '@anchorlock/types';
 import {
   hasuraRequest,
   logAndCheckWebhookEvent,
@@ -9,7 +9,7 @@ import {
   notifyHotelEscrowConversation,
 } from '../../services/hotel-conversation-notify';
 
-// Compile-time SafeTrust escrow state machine (Neon native addon).
+// Compile-time Anchorlock escrow state machine (Neon native addon).
 // Replaces hardcoded status arrays with the authoritative transition table.
 const { getValidPriorStates } = require('../../../../crates/escrow-state-machine') as {
   getValidPriorStates: (to: string, event: string) => string
@@ -114,7 +114,7 @@ export const fundEscrowHandler = async (
     await notifyHotelEscrowConversation({
       contractId,
       eventType: 'escrow_funded',
-      body: 'SafeTrust: Your deposit has been confirmed on the Stellar network. Your booking is secured.',
+      body: 'Anchorlock: Your deposit has been confirmed on the Stellar network. Your booking is secured.',
     });
 
     await markWebhookEventProcessed(eventId);

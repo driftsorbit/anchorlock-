@@ -1,12 +1,12 @@
 import { Request, Response } from 'express';
-import { ResolveDisputePayload } from '@safetrust/types';
+import { ResolveDisputePayload } from '@anchorlock/types';
 import {
   hasuraRequest,
   logAndCheckWebhookEvent,
   markWebhookEventProcessed,
 } from '../../services/hasura';
 
-// Compile-time SafeTrust escrow state machine (Neon native addon).
+// Compile-time Anchorlock escrow state machine (Neon native addon).
 // Replaces hardcoded status strings with the authoritative transition table.
 const { getValidPriorStates } = require('../../../../crates/escrow-state-machine') as {
   getValidPriorStates: (to: string, event: string) => string

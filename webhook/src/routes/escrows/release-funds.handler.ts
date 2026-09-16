@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { ReleaseFundsPayload } from '@safetrust/types';
+import { ReleaseFundsPayload } from '@anchorlock/types';
 import {
   hasuraRequest,
   logAndCheckWebhookEvent,
@@ -87,7 +87,7 @@ export const releaseFundsHandler = async (
     await notifyHotelEscrowConversation({
       contractId,
       eventType: 'escrow_completed',
-      body: 'SafeTrust: Funds have been released. Thank you for booking with us.',
+      body: 'Anchorlock: Funds have been released. Thank you for booking with us.',
     });
 
     await markWebhookEventProcessed(eventId);
