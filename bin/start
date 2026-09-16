@@ -80,7 +80,7 @@ if [[ "${#TENANTS[@]}" -eq 1 && "${TENANTS[0]}" == "safetrust" ]]; then
 fi
 
 echo ""
-echo "🚀 Starting SafeTrust backend..."
+echo "🚀 Starting Anchorlock backend..."
 echo "   Tenants to deploy: ${TENANTS[*]}"
 echo ""
 
@@ -330,7 +330,7 @@ fi
 
 # ── Done ──────────────────────────────────────────────────────────────────────
 echo ""
-echo "✅ SafeTrust backend ready"
+echo "✅ Anchorlock backend ready"
 echo "   Tenants deployed: ${TENANTS[*]}"
 echo "   GraphQL:          ${HASURA_ENDPOINT}/v1/graphql"
 echo "   PostgreSQL:       localhost:${POSTGRES_PORT}"

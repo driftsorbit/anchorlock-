@@ -71,7 +71,7 @@ fi
 # ── Summary header ────────────────────────────────────────────────────────────
 echo ""
 echo "════════════════════════════════════════════════════"
-echo "  SafeTrust Multi-Tenant Setup"
+echo "  Anchorlock Multi-Tenant Setup"
 echo "  Tenants:  ${TENANTS[*]}"
 echo "  Endpoint: $ENDPOINT"
 echo "════════════════════════════════════════════════════"

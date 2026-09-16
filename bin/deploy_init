@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # bin/deploy_init
 # ─────────────────────────────────────────────────────────────────────────────
-# Experimental parallel deployment path for SafeTrust tenants.
+# Experimental parallel deployment path for Anchorlock tenants.
 # Tests chunked seeds, parallel execution, and optional init.sql fast-path.
 # DO NOT call from bin/start — this is a standalone benchmarking tool.
 #
