@@ -1,5 +1,5 @@
 {
-  "name": "safetrust-backend-webhook",
+  "name": "anchorlock-backend-webhook",
   "version": "1.0.0",
   "private": true,
   "type": "commonjs",
