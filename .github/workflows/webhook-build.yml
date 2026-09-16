@@ -29,11 +29,11 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build webhook image
-        run: docker build -t safetrust-webhook:verify -f webhook/Dockerfile .
+        run: docker build -t anchorlock-webhook:verify -f webhook/Dockerfile .
 
       - name: Smoke-test native addons inside the image
         run: |
-          docker run --rm safetrust-webhook:verify node -e "
+          docker run --rm anchorlock-webhook:verify node -e "
             const stellar = require('/app/crates/stellar-utils');
             const verifier = require('/app/crates/webhook-verifier');
             const escrow = require('/app/crates/escrow-state-machine');
