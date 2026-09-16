@@ -4,7 +4,7 @@
 
 ## Overview
 
-After all milestones are approved, the SafeTrust platform triggers fund release on the
+After all milestones are approved, the Anchorlock platform triggers fund release on the
 Stellar escrow contract. TrustlessWork executes the on-chain transfer and sends a signed
 webhook callback to this endpoint. The backend verifies the signature, marks the escrow as
 `completed`, zeroes the balance, and notifies the hotel conversation channel.
@@ -57,7 +57,7 @@ sequenceDiagram
 - The escrow must exist with status `milestone_approved`.
 - All milestones must have been approved (the TrustlessWork contract enforces this
   on-chain before allowing the release transaction).
-- The `releaseSigner` must be the SafeTrust platform wallet. The on-chain contract
+- The `releaseSigner` must be the Anchorlock platform wallet. The on-chain contract
   (or TrustlessWork) verifies this matches the escrow's stored `releaser` before
   executing the release. The backend handler itself does not validate the wallet
   address against the stored escrow — it relies on TrustlessWork's HMAC signature
@@ -143,7 +143,7 @@ marked as processed in `trustless_work_webhook_events` to prevent re-processing.
    `status = "completed"`.
 
 3. **Hotel conversation notification** — A best-effort automated message is sent:
-   *"SafeTrust: Funds have been released. Thank you for booking with us."*
+   *"Anchorlock: Funds have been released. Thank you for booking with us."*
    This never blocks the response.
 
 4. **Webhook event logging** — The event is recorded in `trustless_work_webhook_events`
@@ -158,7 +158,7 @@ An advisory lock prevents concurrent duplicate processing.
 
 | Role        | Description                                                              |
 |-------------|--------------------------------------------------------------------------|
-| `releaser`  | The SafeTrust platform wallet — the only party authorized to release     |
+| `releaser`  | The Anchorlock platform wallet — the only party authorized to release    |
 | `marker`    | The host (hotel) wallet — receives the released funds on-chain           |
 | `approver`  | The guest wallet — approved milestones before release was triggered      |
 

@@ -138,7 +138,7 @@ marked as processed in `trustless_work_webhook_events` to prevent re-processing.
    keep the booking view in sync with the escrow state.
 
 2. **Hotel conversation notification** — A best-effort automated message is sent to the
-   hotel conversation channel: *"SafeTrust: Your deposit has been confirmed on the Stellar
+   hotel conversation channel: *"Anchorlock: Your deposit has been confirmed on the Stellar
    network. Your booking is secured."* This never blocks the response.
 
 3. **Webhook event logging** — The event is recorded in `trustless_work_webhook_events` with
@@ -168,7 +168,7 @@ Values are in USDC stroops — the smallest unit with 7 decimal places. For exam
 |------------|--------------------------------------------------------------|
 | `signer`   | The guest's Stellar wallet that deposited funds on-chain     |
 | `marker`   | The host (hotel) wallet — set during escrow initialization   |
-| `releaser` | The SafeTrust platform wallet — releases funds after stay    |
+| `releaser` | The Anchorlock platform wallet — releases funds after stay   |
 
 ## Error Handling
 

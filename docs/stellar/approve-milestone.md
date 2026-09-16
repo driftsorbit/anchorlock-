@@ -187,7 +187,7 @@ enforces this on-chain.
 |-------------|------------------------------------------------------------------------------------------------------|
 | `approver`  | The host's Stellar wallet that approved the milestone (sent in the callback by TrustlessWork)        |
 | `marker`    | The host (hotel) wallet — stored in the escrow record and set during initialization                  |
-| `releaser`  | The SafeTrust platform wallet — releases funds after all milestones                                  |
+| `releaser`  | The Anchorlock platform wallet — releases funds after all milestones                                 |
 
 > **Note on naming:** The `approver` field in the `trustless_work_escrows` table stores
 > the *guest* wallet address (set during initialization). The `approver` parameter in

@@ -1,6 +1,6 @@
 # Dispute and Resolve Dispute
 
-TrustlessWork reports dispute lifecycle changes to SafeTrust through
+TrustlessWork reports dispute lifecycle changes to Anchorlock through
 callbacks. These handlers mirror the resulting state in the
 database; they do not submit Soroban transactions or decide how funds
 are distributed.
@@ -65,7 +65,7 @@ stateDiagram-v2
 
 ## Phase 3 — Human-in-loop AI approval
 
-In Phase 3, SafeTrust will introduce human-in-loop approval
+In Phase 3, Anchorlock will introduce human-in-loop approval
 workflows for high-value disputes. An AI agent will analyze
 the dispute context (booking metadata, milestone history,
 conversation logs) and propose a resolution. A human reviewer

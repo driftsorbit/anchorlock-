@@ -2,23 +2,23 @@
 
 x402 is an open protocol from Coinbase that enables per-request
 HTTP payments designed for AI agents and automated systems that
-cannot interact with browser wallets. SafeTrust implements
+cannot interact with browser wallets. Anchorlock implements
 x402 v2 on Stellar using Soroban authorization entries and
 USDC SEP-41.
 
-## Why x402 matters for SafeTrust
+## Why x402 matters for Anchorlock
 
 Human users book through a browser with Freighter wallet.
 AI agents — travel bots, autonomous booking systems,
 x402-aware applications — cannot open browser popups.
-Without x402, AI agents cannot book on SafeTrust at all.
+Without x402, AI agents cannot book on Anchorlock at all.
 
 ```mermaid
 flowchart LR
     subgraph Human Booking
         HU([Human Guest]) -->|browser| FE[Next.js Frontend]
         FE -->|Freighter popup| FW[Freighter Wallet]
-        FW -->|signed XDR| BE[SafeTrust API]
+        FW -->|signed XDR| BE[Anchorlock API]
     end
 
     subgraph AI Agent Booking
@@ -33,7 +33,7 @@ flowchart LR
 ```mermaid
 sequenceDiagram
     participant AG as AI Agent
-    participant BE as SafeTrust API
+    participant BE as Anchorlock API
     participant FAC as OpenZeppelin Facilitator
     participant SC as Soroban USDC Contract
 
@@ -101,7 +101,7 @@ Soroban authorization entry, not a broadcast transaction.
 
 ```mermaid
 flowchart TD
-    BE[SafeTrust API\nx402-processor crate] --> FAC1[OpenZeppelin Testnet\nchannels.openzeppelin.com\n/x402/testnet]
+    BE[Anchorlock API\nx402-processor crate] --> FAC1[OpenZeppelin Testnet\nchannels.openzeppelin.com\n/x402/testnet]
     BE --> FAC2[OpenZeppelin Mainnet\nchannels.openzeppelin.com\n/x402]
     BE --> FAC3[Coinbase Testnet\nx402.org/facilitator]
     FAC1 -->|/verify + /settle| SC[Soroban USDC Contract]
@@ -150,8 +150,8 @@ X402_ENABLED=false
 # x402 facilitator endpoint
 X402_FACILITATOR_URL=https://channels.openzeppelin.com/x402/testnet
 
-# SafeTrust platform wallet — receives booking fees
-SAFETRUST_PLATFORM_WALLET=
+# Anchorlock platform wallet — receives booking fees
+ANCHORLOCK_PLATFORM_WALLET=
 
 # Stellar network for USDC contract address selection
 STELLAR_NETWORK=testnet
