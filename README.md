@@ -2,7 +2,7 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/safetrustcr/frontend-SafeTrust/develop/public/img/logo.png" alt="SafeTrust Logo" width="90" />
 
-  # 🛡️ backend-SafeTrust
+  # 🛡️ backend-Anchorlock
   **⚡ Hasura GraphQL · 🐘 PostgreSQL · 🪝 Webhook Service · 🏢 Multi-tenant**
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](https://opensource.org/licenses/MIT)
@@ -34,7 +34,7 @@
 
 ## 🔍 What is this repo?
 
-The backend infrastructure for **SafeTrust** — a decentralized P2P escrow platform for rental transactions on the Stellar blockchain. This repo contains:
+The backend infrastructure for **Anchorlock** — a decentralized P2P escrow platform for rental transactions on the Stellar blockchain. This repo contains:
 
 - ⚡ **Hasura GraphQL Engine** — auto-generated API with JWT auth and row-level permissions
 - 🐘 **PostgreSQL** — multi-tenant schema (`safetrust` + `hotel_industry`)
@@ -301,4 +301,4 @@ Reports are generated at:
 
 ## 📄 License
 
-© 2026 SafeTrust. Released under the [MIT License](https://opensource.org/license/MIT).
+© 2026 Anchorlock. Released under the [MIT License](https://opensource.org/license/MIT).
