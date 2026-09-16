@@ -8,7 +8,7 @@ mod validator;
 
 /// Validate a state transition.
 ///
-/// Returns `true` if `from → to` via `event` is a legal SafeTrust transition.
+/// Returns `true` if `from → to` via `event` is a legal Anchorlock transition.
 /// Throws a descriptive error on an unknown status or event string.
 fn validate_transition(mut cx: FunctionContext) -> JsResult<JsBoolean> {
     let from_str  = cx.argument::<JsString>(0)?.value(&mut cx);

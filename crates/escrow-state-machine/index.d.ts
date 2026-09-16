@@ -1,4 +1,4 @@
-/// Validate a SafeTrust escrow state transition.
+/// Validate an Anchorlock escrow state transition.
 /// Returns true if `from → to` via `event` is a legal transition.
 export function validateTransition(
   from: string,
@@ -14,5 +14,5 @@ export function getValidPriorStates(
   event: string
 ): string
 
-/// Returns the complete SafeTrust transition table as a JSON string.
+/// Returns the complete Anchorlock transition table as a JSON string.
 export function getTransitionTable(): string

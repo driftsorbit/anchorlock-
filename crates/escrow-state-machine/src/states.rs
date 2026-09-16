@@ -1,4 +1,4 @@
-/// Every valid escrow status in SafeTrust.
+/// Every valid escrow status in Anchorlock.
 ///
 /// Adding a new status here requires updating `TransitionRule` construction
 /// inside `transition_table()` — the exhaustive `match` in that function is a
@@ -49,7 +49,7 @@ impl EscrowStatus {
     }
 }
 
-/// Every valid webhook event type in SafeTrust.
+/// Every valid webhook event type in Anchorlock.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum WebhookEvent {
     EscrowInitialized,

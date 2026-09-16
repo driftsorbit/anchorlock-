@@ -1,6 +1,6 @@
 use crate::states::{EscrowStatus, WebhookEvent};
 
-/// A valid state transition in the SafeTrust escrow lifecycle.
+/// A valid state transition in the Anchorlock escrow lifecycle.
 ///
 /// `from` is a `'static` slice so the rule can be embedded in the compiled
 /// table without allocation. Every legal transition is listed exactly once;
@@ -25,7 +25,7 @@ const FROM_DISPUTED:              &[EscrowStatus] = &[EscrowStatus::Disputed];
 const FROM_CREATED_PENDING_FUNDED: &[EscrowStatus] =
     &[EscrowStatus::Created, EscrowStatus::PendingFunding, EscrowStatus::Funded];
 
-/// The canonical SafeTrust escrow state machine.
+/// The canonical Anchorlock escrow state machine.
 ///
 /// The `for target in all_statuses()` loop drives an exhaustive `match` over
 /// `EscrowStatus`. Adding a new `EscrowStatus` variant is a COMPILE ERROR
