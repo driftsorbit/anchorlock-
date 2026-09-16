@@ -20,7 +20,7 @@ describe('x402-payment.middleware', () => {
     next = jest.fn()
     delete process.env.STELLAR_NETWORK
     delete process.env.X402_FACILITATOR_URL
-    delete process.env.SAFETRUST_PLATFORM_WALLET
+    delete process.env.ANCHORLOCK_PLATFORM_WALLET
   })
 
   afterEach(() => {
@@ -97,7 +97,7 @@ describe('x402-payment.middleware', () => {
           },
           facilitator_url: 'https://channels.openzeppelin.com/x402/testnet',
           pay_to: 'GPLATFORM',
-          description: 'SafeTrust booking fee',
+          description: 'Anchorlock booking fee',
         })
       )
 
@@ -166,7 +166,7 @@ describe('x402-payment.middleware', () => {
             payer_address: null,
             amount_usdc: 0,
             network: 'ethereum:1',
-            invalid_reason: 'Unsupported network: \'ethereum:1\' — SafeTrust only accepts Stellar payments',
+            invalid_reason: 'Unsupported network: \'ethereum:1\' — Anchorlock only accepts Stellar payments',
           })
         ),
         buildPaymentRequirement: jest.fn(),
@@ -179,7 +179,7 @@ describe('x402-payment.middleware', () => {
       expect(res.status).toHaveBeenCalledWith(402)
       expect(res.json).toHaveBeenCalledWith({
         error: 'Invalid x402 payment',
-        invalid_reason: 'Unsupported network: \'ethereum:1\' — SafeTrust only accepts Stellar payments',
+        invalid_reason: 'Unsupported network: \'ethereum:1\' — Anchorlock only accepts Stellar payments',
         x402Version: 2,
       })
     })

@@ -17,7 +17,7 @@ describe('x402-processor native addon', () => {
       0.10,
       'stellar:testnet',
       'https://channels.openzeppelin.com/x402/testnet',
-      'GSAFETRUSTWALLET'
+      'GANCHORLOCKWALLET'
     )
     const result = JSON.parse(jsonStr)
 
@@ -31,8 +31,8 @@ describe('x402-processor native addon', () => {
         issuer: 'GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5',
       },
       facilitator_url: 'https://channels.openzeppelin.com/x402/testnet',
-      pay_to: 'GSAFETRUSTWALLET',
-      description: 'SafeTrust booking fee',
+      pay_to: 'GANCHORLOCKWALLET',
+      description: 'Anchorlock booking fee',
     })
   })
 

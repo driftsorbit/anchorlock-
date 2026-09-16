@@ -50,7 +50,7 @@ export const requireX402Payment =
       (NETWORK === 'mainnet'
         ? 'https://channels.openzeppelin.com/x402'
         : 'https://channels.openzeppelin.com/x402/testnet')
-    const PLATFORM_WALLET = process.env.SAFETRUST_PLATFORM_WALLET ?? ''
+    const PLATFORM_WALLET = process.env.ANCHORLOCK_PLATFORM_WALLET ?? ''
 
     const paymentHeader = req.headers['x-payment'] as string | undefined
 
@@ -75,7 +75,7 @@ export const requireX402Payment =
           },
           facilitator_url: FACILITATOR_URL,
           pay_to: PLATFORM_WALLET,
-          description: 'SafeTrust booking fee',
+          description: 'Anchorlock booking fee',
         }
         res.status(402).json({
           error: 'Payment Required',
